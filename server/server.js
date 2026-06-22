@@ -1,11 +1,9 @@
+import "./config/dotenv.js";
 import express from "express";
 import path from "path";
 import favicon from "serve-favicon";
-import dotenv from "dotenv";
 import events from "./routes/events.js";
 import locations from "./routes/locations.js";
-
-dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
