@@ -1,3 +1,8 @@
+const formatDate = (d) => {
+    if (!d) return ''
+    return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })
+}
+
 const formatTime = (t) => {
     if (!t) return ''
     const [hour, minute] = t.split(':')
@@ -12,11 +17,13 @@ const formatRemainingTime = (eventDate) => {
     const now = new Date()
     const event = new Date(eventDate)
     const diff = event - now
-    if (diff <= 0) return 'Event has passed'
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24))
-    if (days > 0) return `${days} day${days !== 1 ? 's' : ''} away`
-    const hours = Math.floor(diff / (1000 * 60 * 60))
-    return `${hours} hour${hours !== 1 ? 's' : ''} away`
+    const isPast = diff < 0
+    const totalDays = Math.floor(Math.abs(diff) / (1000 * 60 * 60 * 24))
+    const months = Math.floor(totalDays / 30)
+    const days = totalDays % 30
+    const sign = isPast ? '-' : ''
+    if (months > 0) return `${sign}${months} month${months !== 1 ? 's' : ''}, ${sign}${days} day${days !== 1 ? 's' : ''}`
+    return `${sign}${days} day${days !== 1 ? 's' : ''}`
 }
 
 const formatNegativeTimeRemaining = (remaining, id) => {
@@ -26,4 +33,4 @@ const formatNegativeTimeRemaining = (remaining, id) => {
     }
 }
 
-export default { formatTime, formatRemainingTime, formatNegativeTimeRemaining }
+export default { formatDate, formatTime, formatRemainingTime, formatNegativeTimeRemaining }

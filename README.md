@@ -1,10 +1,10 @@
-# WEB103 Project 3 - _Name of App Here_
+# WEB103 Project 3 - UnityGrid Plaza
 
-Submitted by: **Your name here**
+Submitted by: **Andrea Nunoo**
 
-About this web app: **App description here**
+About this web app: **UnityGrid Plaza is a virtual community space where users can explore event venues and browse upcoming events hosted at each location.**
 
-Time spent: **4** hours
+Time spent: **5** hours
 
 ## Required Features
 
@@ -12,22 +12,22 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 
-- [ ] **The web app uses React to display data from the API**
-- [ ] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
+- [x] **The web app uses React to display data from the API**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
   - [ ] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
   - [ ] **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT \* FROM tablename;' to display your table contents.**
-- [ ] **The web app displays a title.**
-- [ ] **Website includes a visual interface that allows users to select a location they would like to view.**
+- [x] **The web app displays a title.**
+- [x] **Website includes a visual interface that allows users to select a location they would like to view.**
   - [ ] _Note: A non-visual list of links to different locations is insufficient._
-- [ ] **Each location has a detail page with its own unique URL.**
-- [ ] **Clicking on a location navigates to its corresponding detail page and displays list of all events from the `events` table associated with that location.**
+- [x] **Each location has a detail page with its own unique URL.**
+- [x] **Clicking on a location navigates to its corresponding detail page and displays list of all events from the `events` table associated with that location.**
 
 The following **optional** features are implemented:
 
-- [ ] An additional page shows all possible events
+- [x] An additional page shows all possible events
   - [ ] Users can sort _or_ filter events by location.
-- [ ] Events display a countdown showing the time remaining before that event
-  - [ ] Events appear with different formatting when the event has passed (ex. negative time, indication the event has passed, crossed out, etc.).
+- [x] Events display a countdown showing the time remaining before that event
+  - [x] Events appear with different formatting when the event has passed (ex. negative time, indication the event has passed, crossed out, etc.).
 
 The following **additional** features are implemented:
 
@@ -40,11 +40,13 @@ Here's a walkthrough of implemented required features:
 Seeded database
 <img src='./server/seeded_success.png'/>
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<Here's a walkthrough of implemented required features:
+
+[Video Walkthrough](https://www.loom.com/share/546634a00eb7444db98bdb5d8c3c4d7f)
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ... GIF tool here
+GIF created with ... Loom
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -53,11 +55,12 @@ GIF created with ... GIF tool here
 
 ## Notes
 
-None! Completing labs really came in handy and was good for referencing :)
+Completing labs really came in handy and was good for referencing :).
+Getting the date countdown was very tricky due to formatting.
 
 ## License
 
-Copyright [2026] [name of copyright owner]
+Copyright [2026] [Andrea N.]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

@@ -36,7 +36,7 @@ const Event = (props) => {
     useEffect(() => {
         (async () => {
             try {
-                const timeRemaining = await dates.formatRemainingTime(event.remaining)
+                const timeRemaining = await dates.formatRemainingTime(event.date)
                 setRemaining(timeRemaining)
                 dates.formatNegativeTimeRemaining(remaining, event.id)
             }
@@ -53,7 +53,7 @@ const Event = (props) => {
             <div className='event-information-overlay'>
                 <div className='text'>
                     <h3>{event.title}</h3>
-                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {event.date} <br /> {time}</p>
+                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {dates.formatDate(event.date)} <br /> {time}</p>
                     <p id={`remaining-${event.id}`}>{remaining}</p>
                 </div>
             </div>
